@@ -8,7 +8,7 @@ function Seed() {
   const [seed, setSeed] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:2000/api/holidays/seed")
+    fetch("https://project3-backend-papertrading.herokuapp.com/api/holidays/seed")
       .then((response) => response.json())
       .then((data) => setSeed(data));
   }, []);
