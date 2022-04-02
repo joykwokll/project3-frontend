@@ -1,4 +1,8 @@
-fetch('http://localhost:8000/api/holidays/seed')
+// fetch('http://localhost:8000/api/holidays/seed')
+//   .then(response => response.json())
+//   .then(data => console.log(data));
+
+fetch('https://project3-backend-papertrading.herokuapp.com/api/holidays/seed')
   .then(response => response.json())
   .then(data => console.log(data));
 
