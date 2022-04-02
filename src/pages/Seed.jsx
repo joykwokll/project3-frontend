@@ -6,24 +6,24 @@ import { useEffect, useState } from "react";
 import urlcat from 'urlcat';
 const BACKEND = process.env.REACT_APP_BACKEND ?? "http://localhost:3001" 
 
-// function Seed() {
-//     const [seed, setSeed] = useState([]);
-  
-//     useEffect(() => {
-//       fetch(urlcat(BACKEND, "/api/holidays/seed"))
-//         .then((response) => response.json())
-//         .then((data) => setSeed(data));
-//     }, []);
-  
-
 function Seed() {
-  const [seed, setSeed] = useState([]);
+    const [seed, setSeed] = useState([]);
+  
+    useEffect(() => {
+      fetch(urlcat(BACKEND, "/api/holidays/seed"))
+        .then((response) => response.json())
+        .then((data) => setSeed(data));
+    }, []);
+  
 
-  useEffect(() => {
-    fetch(`${BACKEND}`)
-      .then((response) => response.json())
-      .then((data) => setSeed(data));
-  }, []);
+// function Seed() {
+//   const [seed, setSeed] = useState([]);
+
+//   useEffect(() => {
+//     fetch(`${BACKEND}`)
+//       .then((response) => response.json())
+//       .then((data) => setSeed(data));
+//   }, []);
 
   return (
     <>
