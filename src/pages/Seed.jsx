@@ -3,7 +3,7 @@
 //   .then(data => console.log(data));
 
 import { useEffect, useState } from "react";
-const BACKEND = process.env.BACKEND ?? "http://localhost:3001" 
+const BACKEND = process.env.REACT_APP_BACKEND ?? "http://localhost:3001" 
 
 function Seed() {
   const [seed, setSeed] = useState([]);
