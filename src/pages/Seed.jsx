@@ -3,6 +3,7 @@
 //   .then(data => console.log(data));
 
 import { useEffect, useState } from "react";
+import urlcat from 'urlcat';
 const BACKEND = process.env.REACT_APP_BACKEND ?? "http://localhost:3001" 
 
 function Seed() {
