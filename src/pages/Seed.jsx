@@ -3,14 +3,17 @@
 //   .then(data => console.log(data));
 
 import { useEffect, useState } from "react";
+const BACKEND = process.env.BACKEND ?? "http://localhost:3001" 
 
 function Seed() {
   const [seed, setSeed] = useState([]);
 
   useEffect(() => {
-    fetch("https://project3-backend-papertrading.herokuapp.com/api/holidays/seed")
+    fetch(`${BACKEND}/api/holidays/seed`)
       .then((response) => response.json())
-      .then((data) => setSeed(data));
+      .then((data) => {
+          setSeed(data)
+          console.log(data)});
   }, []);
 
   return (
