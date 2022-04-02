@@ -22,8 +22,7 @@ function Seed() {
   useEffect(() => {
     fetch(`${BACKEND}`)
       .then((response) => response.json())
-      .then((data) => {
-          setSeed(data)});
+      .then((data) => setSeed(data));
   }, []);
 
   return (
