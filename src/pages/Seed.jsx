@@ -2,13 +2,17 @@
 //   .then(response => response.json())
 //   .then(data => console.log(data));
 
-fetch('https://project3-backend-papertrading.herokuapp.com/api/holidays/seed')
-  .then(response => response.json())
-  .then(data => console.log(data));
-
-  const seed = []
+import { useEffect, useState } from "react";
 
 function Seed() {
+  const [seed, setSeed] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:2000/api/holidays/seed")
+      .then((response) => response.json())
+      .then((data) => setSeed(data));
+  }, []);
+
   return (
     <>
       <h1>Seed</h1>
