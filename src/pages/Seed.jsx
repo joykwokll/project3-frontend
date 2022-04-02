@@ -10,7 +10,7 @@ function Seed() {
     const [seed, setSeed] = useState([]);
   
     useEffect(() => {
-      fetch(urlcat(BACKEND, "/api/holidays/seed"))
+      fetch(urlcat(BACKEND))
         .then((response) => response.json())
         .then((data) => setSeed(data));
     }, []);
