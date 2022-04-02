@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from "react";
 import urlcat from 'urlcat';
-const BACKEND = process.env.REACT_APP_BACKEND ?? "http://localhost:3001" 
+const BACKEND = process.env.REACT_APP_BACKEND ?? "http://localhost:3002" 
 
 function Seed() {
     const [seed, setSeed] = useState([]);
